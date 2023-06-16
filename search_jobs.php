@@ -38,7 +38,7 @@
     <!-- header section start-->
 
     <!-- Search form section -->
-    <div class="search_section layout_padding">
+    <div class="search_section layout_padding mb-5">
         <div class="container">
             <!-- Form contents -->
             <form action="get_jobs.php" method="GET">
@@ -77,20 +77,16 @@
                     </div>
                 </div>
             </form>
-
-            <!-- Job listings -->
-            <?php
-            if (isset($_GET['keywords']) && isset($_GET['location'])) {
-                $keywords = $_GET['keywords'];
-                $location = $_GET['location'];
-
-                $requestUrl = 'get_jobs.php?keywords=' . urlencode($keywords) . '&location=' . urlencode($location);
-                include $requestUrl;
-            }
-            ?>
         </div>
     </div>
     <!-- search_jobs section end-->
+
+    <!-- Job listings -->
+    <div class="container">
+        <div class="row justify-content-left">
+            <?php include 'get_jobs.php'; ?>
+        </div>
+    </div>
 
     <!-- footer section start-->
     <div class="footer_section layout_padding">
