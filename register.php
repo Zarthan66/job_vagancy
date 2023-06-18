@@ -35,7 +35,7 @@
 
 <body>
   <!-- header section start-->
-  <?php include 'navbar.php';?>
+  <?php include 'includes/navbar.php'; ?>
   <!-- header section end-->
   <!-- login section start-->
   <div class="services_section">
@@ -51,16 +51,6 @@
             <div class="card-body">
               <h5 class="card-title text-center">Register</h5>
               <form class="register-form" method="post" action="register_process.php">
-                <?php if (isset($error)) : ?>
-                  <div class="error alert alert-danger">
-                    <?php echo $error ?>
-                  </div>
-                <?php endif; ?>
-                <?php if (isset($success)) : ?>
-                  <div class="success alert alert-success">
-                    Berhasil mendaftar. Silakan <a href="login.php">login</a>.
-                  </div>
-                <?php endif; ?>
                 <div class="form-label-group">
                   <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required autofocus>
                   <label for="inputUsername">Username</label>
@@ -73,8 +63,8 @@
                   <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
                   <label for="inputEmail">Email address</label>
                 </div>
-                <button type="submit" class="btn btn-primary text-uppercase" name="kirim" value="Register">Create</button>
-                <p class="message mt-3">Already registered? <a href="login.php">Sign In</a></p>
+                <button type="submit" class="btn btn-block btn-danger text-uppercase font-weight-bold" style="border-radius: 3rem;" value="Register">Create</button>
+                <p class="message mt-3">Already registered? <a href="login.php" class="text-primary">Sign In</a></p>
               </form>
             </div>
           </div>
@@ -85,34 +75,7 @@
   </div>
   <!-- login section end-->
 
-  <!-- footer section start-->
-  <div class="footer_section layout_padding">
-    <div class="container">
-      <h1 class="subscribr_text">Subscribe Now</h1>
-      <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have </p>
-      <div class="box_main_2">
-        <textarea type="" class="email_bt_2" placeholder="Enter Your Email" name=""></textarea>
-      </div>
-      <button class="subscribe_bt_2"><a href="#">Subscribe</a></button>
-    </div>
-  </div>
-  <!-- footer section end-->
-  <!-- copyright section start-->
-  <div class="copyright_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p class="copyright_text">Copyright 2020 All Right Reserved By.
-            <a href="https://html.design"> Free HTML Templates</a>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <p class="cookies_text">Cookies, Privacy and Terms</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- copyright section end-->
+  <?php include 'includes/footer.php'; ?>
 
   <!-- Javascript files-->
   <script src="js/jquery.min.js"></script>
@@ -135,5 +98,5 @@
     });
   </script>
 </body>
-</html>
 
+</html>

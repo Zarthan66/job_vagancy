@@ -24,7 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$hashedPassword', '$email')";
 
   if ($conn->query($sql) === TRUE) {
-    echo "Registration successful!";
+    echo "Register successfull, silahkan login...";
+    $redirectDelay = 1500; 
+    echo "<script>setTimeout(function() { window.location.href = 'login.php'; }, $redirectDelay);</script>";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }

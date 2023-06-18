@@ -34,7 +34,7 @@
 
 <body>
     <!-- header section start-->
-    <?php include 'navbar.php'; ?>
+    <?php include 'includes/navbar.php'; ?>
     <!-- header section start-->
 
     <!-- Search form section -->
@@ -84,39 +84,14 @@
     <!-- Job listings -->
     <div class="container">
         <div class="row justify-content-left">
-            <?php include 'get_jobs.php'; ?>
+            <?php
+                include 'includes/get_jobs.php';
+            ?>
         </div>
     </div>
 
-    <!-- footer section start-->
-    <div class="footer_section layout_padding">
-        <div class="container">
-            <h1 class="subscribr_text">Subscribe Now</h1>
-            <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have </p>
-            <div class="box_main_2">
-                <textarea type="" class="email_bt_2" placeholder="Enter Your Email" name=""></textarea>
-            </div>
-            <button class="subscribe_bt_2"><a href="#">Subscribe</a></button>
-        </div>
-    </div>
-    <!-- footer section end-->
 
-    <!-- copyright section start-->
-    <div class="copyright_section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="copyright_text">
-                        &copy; 2020 All Right Reserved By. <a href="https://html.design">Free HTML Templates</a>
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <p class="cookies_text">Cookies, Privacy, and Terms</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- copyright section end-->
+    <?php include 'includes/footer.php'; ?>
 
     <!-- Javascript files -->
     <script src="js/jquery.min.js"></script>

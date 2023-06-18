@@ -35,7 +35,7 @@
 
 <body>
   <!-- header section start-->
-  <?php include 'navbar.php';?>
+  <?php include 'includes/navbar.php'; ?>
   <!-- header section end-->
   <!-- login section start-->
   <div class="services_section">
@@ -50,7 +50,7 @@
           <div class="card card-signin my-5">
             <div class="card-body">
               <h5 class="card-title text-center">Log In</h5>
-              <?php if(isset($_GET['error'])): ?>
+              <?php if (isset($_GET['error'])) : ?>
                 <p style="color: red;"><?php echo $_GET['error']; ?></p>
               <?php endif; ?>
               <form class="form-signin" action="login_process.php" method="POST">
@@ -66,7 +66,7 @@
                   <input type="checkbox" class="custom-control-input" id="customCheck1">
                   <label class="custom-control-label" for="customCheck1">Remember password</label>
                 </div>
-                <button type="submit" class="btn btn-primary text-uppercase" name="login">Login</button>
+                <button type="submit" class="btn btn-block btn-danger text-uppercase font-weight-bold" style="border-radius: 3rem;">Login</button>
                 <p class="message mt-3">Doesnt have account? <a href="register.php">Sign Up</a></p>
               </form>
             </div>
@@ -77,36 +77,9 @@
   </div>
   </div>
   <!-- login section end-->
+  <?php include 'includes/footer.php'; ?>
 
-  <!-- footer section start-->
-  <div class="footer_section layout_padding">
-    <div class="container">
-      <h1 class="subscribr_text">Subscribe Now</h1>
-      <p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have </p>
-      <div class="box_main_2">
-        <textarea type="" class="email_bt_2" placeholder="Enter Your Email" name=""></textarea>
-      </div>
-      <button class="subscribe_bt_2"><a href="#">Subscribe</a></button>
-    </div>
-  </div>
-  <!-- footer section end-->
-  <!-- copyright section start-->
-  <div class="copyright_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p class="copyright_text">Copyright 2020 All Right Reserved By.
-            <a href="https://html.design"> Free HTML Templates</a>
-          </p>
-        </div>
-        <div class="col-md-6">
-          <p class="cookies_text">Cookies, Privacy and Terms</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- copyright section end-->
-
+  <?php include 'includes/footer.php'; ?>
   <!-- Javascript files-->
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
