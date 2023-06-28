@@ -73,11 +73,11 @@
                     </button>
                 </div>
                 <div class="button-group">
-                    <button class="btn btn-outline-danger btn-block mb-2 text-left" onclick="showContent('experience')">Experience</button>
-                    <button class="btn btn-outline-danger btn-block mb-2 text-left" onclick="showContent('education')">Education</button>
-                    <button class="btn btn-outline-danger btn-block mb-2 text-left" onclick="showContent('skills')">Skills</button>
-                    <button class="btn btn-outline-danger btn-block mb-2 text-left" onclick="showContent('about-me')">About Me</button>
-                    <button class="btn btn-outline-danger btn-block mb-2 text-left" onclick="showContent('additional-info')">Additional Info</button>
+                    <button class="btn btn-outline-danger btn-block mb-4 text-left" onclick="showContent('experience')">Experience</button>
+                    <button class="btn btn-outline-danger btn-block mb-4 text-left" onclick="showContent('education')">Education</button>
+                    <button class="btn btn-outline-danger btn-block mb-4 text-left" onclick="showContent('skills')">Skills</button>
+                    <button class="btn btn-outline-danger btn-block mb-4 text-left" onclick="showContent('about-me')">About Me</button>
+                    <button class="btn btn-outline-danger btn-block mb-4 text-left" onclick="showContent('additional-info')">Additional Info</button>
                 </div>
             </div>
             <div class="col-md-7">
@@ -139,7 +139,9 @@
                                             I am a student seeking internship or part-time jobs
                                         </label>
                                     </div>
-                                    <button type="submit" class="py-1 px-3 mt-3 btn btn-danger text-uppercase font-weight-bold" style="border-radius: 3rem;">Save</button>
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="py-1 px-5 btn btn-danger text-uppercase font-weight-bold" style="border-radius: 3rem;">Save</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -149,48 +151,123 @@
                     <h2 class="font-weight-bold">Education</h2>
                     <hr>
                     <div class="my-4">
-                        <p class="my-1 font-weight-bold" style="font-size: large;">About Me</p>
                         <div class="container">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <p>Address</p>
-                                    <p>Nationality</p>
-                                </div>
-                                <div class="col-md-7">
-                                    <p>Merdeka Street No. 123</p>
-                                    <p>Indonesia</p>
+                            <div class="form-group">
+                                <label for="university">University</label>
+                                <input type="text" class="form-control" id="university" name="university" placeholder="Enter university" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="graduation">Graduation Date</label>
+                                <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter nationality" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="major">Major</label>
+                                <input type="text" class="form-control" id="major" name="major" placeholder="Enter university" required>
+                            </div>
+                            <div class="form-group row">
+                                <label for="field-of-study" class="col-3 col-form-label align-self-center">Field of Study</label>
+                                <div class="col-9">
+                                    <select class="form-control  w-100 py-0" id="field-of-study" name="field-of-study" required>
+                                        <option value="">- Select Field of Study -</option>
+                                        <option value="ComputerScience">Computer Science</option>
+                                        <option value="Architecture">Architecture</option>
+                                        <option value="BioTechnology">Bio Technology</option>
+                                        <option value="Chemistry">Chemistry</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="my-4">
-                        <p class="my-1 font-weight-bold" style="font-size: large;">Additional Info</p>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-5">
-                                    <p>Expected Salary</p>
-                                    <p>Preffered Work Location</p>
+                            <div class="form-group row">
+                                <label for="grade" class="col-3 col-form-label align-self-center">Field of Study</label>
+                                <div class="col-9">
+                                    <select class="form-control  w-100 py-0" id="grade" name="grade" required>
+                                        <option value="">- Select Grade Status -</option>
+                                        <option value="Incomplete">Incomplete</option>
+                                        <option value="Complete">Complete</option>
+                                        <option value="On-going">On-going</option>
+                                    </select>
                                 </div>
-                                <div class="col-md-7">
-                                    <p>IDR 3,000,000</p>
-                                    <p>Magelang</p>
-                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="py-1 px-5 btn btn-danger text-uppercase font-weight-bold" style="border-radius: 3rem;">Save</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="content" id="skills" style="display: none;">
-                    <h2>Skills</h2>
-                    <p>This is the content for Skills.</p>
+                    <h2 class="pb-1 font-weight-bold">Skills</h2>
+                    <hr>
+                    <div class="my-4">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="form-group m-0">
+                                        <label for="skills">Skills</label>
+                                        <input type="text" class="form-control py-3" id="skills" name="skills" placeholder="Enter university" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label for="grade" class="align-self-center">Field of Study</label>
+                                        <select class="form-control w-100 py-0 m-0" id="grade" name="grade" required>
+                                            <option value="">- Select Grade Status -</option>
+                                            <option value="Incomplete">Incomplete</option>
+                                            <option value="Complete">Complete</option>
+                                            <option value="On-going">On-going</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="py-1 px-5 btn btn-danger text-uppercase font-weight-bold" style="border-radius: 3rem;">Save</button>
+                    </div>
                 </div>
                 <div class="content" id="about-me" style="display: none;">
-                    <h2>About Me</h2>
-                    <p>This is the content for About Me.</p>
+                    <h2 class="font-weight-bold">About Me</h2>
+                    <hr>
+                    <div class="my-4">
+                        <div class="container">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nationality">Nationality</label>
+                                <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Enter nationality" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address" required>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="py-1 px-5 btn btn-danger text-uppercase font-weight-bold" style="border-radius: 3rem;">Save</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="content" id="additional-info" style="display: none;">
-                    <h2>Additional Info</h2>
-                    <p>This is the content for Additional Info.</p>
+                    <h2 class="font-weight-bold">Additional Info</h2>
+                    <hr>
+                    <div class="my-4">
+                        <div class="container">
+                            <div class="form-group">
+                                <label for="expected-salary">Expected Salary</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Expected Salary" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="preferred-work-location">Preferred Work Location</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Enter Preferred Work Location" required>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="py-1 px-5 btn btn-danger text-uppercase font-weight-bold" style="border-radius: 3rem;">Save</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -40,7 +40,7 @@
             <h1 class="best_taital">Searh your job here!</h1>
             <div class="box_main">
                 <input type="" class="email_bt" placeholder="Search Job" name="">
-                <button class="subscribe_bt"><a href="#">Subscribe</a></button>
+                <button class="subscribe_bt"><a href="search_jobs.php">Search</a></button>
             </div>
             <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alterationThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
             <div class="bt_main">
